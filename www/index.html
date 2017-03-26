@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <style type="text/css">
+          
+          #header{
+            top:0px; left:0px; height:50px; right:0px;background-color:#81c784;
+            position: fixed;z-index: 10000;padding-top:10px;
+
+          }
+          .row{
+            margin: 0px !important;
+          }
+      </style>
+    </head>
+
+    <body style="background-color:#f5f2f0">
+        <div id="header" class=""> 
+               <i class="material-icons" style="margin-left: 10px;color:#fff;">&#xE8DC;</i> <label style="font-size: 20px;font-weight: 700px;color:#fff;margin-left: 3px;">Election survey  </label>
+           
+        </div>
+        <div class="container" style="padding-top: 50px;width:100%;position:relative;">
+        <!-- Page Content goes here -->
+
+             <form  id="submitForm" method="POST" style="padding:5px;">
+             <div class="row" style="margin-bottom: 0px;">
+              <div class="col s12 m12" style="padding: 0px;">
+                <div class="card-panel" style="background-color:  #e8f5e9;padding: 13px;margin-bottom:0px;padding-left:24px;">
+                  <span class="" style="color: rgba(0, 0, 0, 0.77)">1.ஆர் கே நகரில் உங்கள் AREA-வில் நீங்கள் சந்திக்கும் பிரச்சனைகள் ?
+                  </span>
+                     <p>
+                          <input type="checkbox" class="areaBroblem" name="survey_electricity" id="power"  />
+                          <label for="power">மின்சாரம் வருகிறதா </label>
+                    </p>
+                     <p>
+                          <input type="checkbox" class="areaBroblem" name="survey_ration_shop" id="ration"  />
+                          <label for="ration">Ration - இல் பொருள்  இருக்கிறதா</label>
+                    </p>
+                      <p>
+                          <input type="checkbox" class="areaBroblem" name="survey_drinking_water" id="water" />
+                          <label for="water">குடிநீர் வருகிறதா</label>
+                     </p>
+                     <p>
+                          <input type="checkbox" class="areaBroblem" name="survey_drainage" id="roadwastagewater"  />
+                          <label for="roadwastagewater">குடிநீர் கழிவுநீர்  கலப்படம்</label>
+                    </p>
+                     <p>
+                          <input type="checkbox" class="areaBroblem" name="survey_garbage" id="trashremovel" />
+                          <label for="trashremovel">தினசரி குப்பை  அகற்றப்படுகிறதா</label>
+                    </p>
+                      <p>
+                          <input type="checkbox" class="areaBroblem" name="survey_street_lamp" id="streelight" />
+                          <label for="streelight">சலுகைகள் வருகிறதா </label>
+                     </p>
+                      <p>
+                          <input type="checkbox" class="areaBroblem" name="survey_road" id="roadbuggy" />
+                          <label for="roadbuggy">நல்ல சாலைகள் இருக்கிறதா</label>
+                     </p>
+                     <p>
+                          <input type="checkbox" class="areaBroblem" name="survey_medical_facility" id="medical" />
+                          <label for="medical">அரசு மருத்துவ வசதி இருக்கிறதா  </label>
+                    </p>
+                     <p>
+                          <input type="checkbox" class="areaBroblem" name="survey_other_need" id="other"  />
+                          <label for="other">மற்றவை </label>
+                    </p>
+                </div>
+              </div>
+            </div>            
+            <div class="row" style="margin-bottom: 0px;">
+              <div class="col s12 m12" style="padding: 0px;">
+                <div class="card-panel" style="background-color:  #e8f5e9;padding: 13px;margin-bottom:0px;margin-top:0px;padding-left:24px;">
+                  <span class="" style="color: rgba(0, 0, 0, 0.77)">2. யாருக்கு உங்கள் ஆதரவு?
+                  <span style="color:#d32f2f">*</span></span>
+                      <p>
+                          <input name="party_id" type="radio" value="ops" id="ops" />
+                          <label for="ops">OPS அம்மா அணி  </label>
+                     </p>
+                     <p>
+                          <input name="party_id" type="radio" value="sasikala" id="sasikala"  />
+                          <label for="sasikala">சசிகலா அணி </label>
+                    </p>
+                     <p>
+                          <input name="party_id" type="radio" value="dmk" id="dmk"  />
+                          <label for="dmk">திமுக அணி </label>
+                    </p>
+                      <p>
+                          <input name="party_id" type="radio" value="deepa" id="deepa" />
+                          <label for="deepa">தீபா    </label>
+                     </p>
+                      <p>
+                          <input name="party_id" type="radio" value="bjp" id="bjp" />
+                          <label for="bjp">பாஜக   </label>
+                     </p>
+                      <p>
+                          <input name="party_id" type="radio" value="dmdk" id="dmdk" />
+                          <label for="dmdk">தேமுதிக</label>
+                     </p>
+                      <p>
+                          <input name="party_id" type="radio" value="nota" id="nota" />
+                          <label for="nota">NOTA</label>
+                     </p>
+                     <p>
+                          <input name="party_id" type="radio" value="otherParty" id="otherParty" />
+                          <label for="otherParty">மற்ற அணிகள் </label>
+                    </p>                    
+                     
+                    </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="row" style="margin-bottom: 0px;">
+              <div class="col s12 m12" style="padding: 0px;">
+                <input type="hidden" name="party_reason" />
+                <div class="" style="background-color:  #e8f5e9;padding-left: 13px;height: 600px;margin-bottom:0px;margin-top:0px;">
+                  <div class="card-content">                        
+                     
+                         <div class="input-field col s12">
+                          <span class="" style="color: rgba(0, 0, 0, 0.77)">3. பெயர்<span style="color:#d32f2f">*</span></span>
+                          <input placeholder="" id="user_name" name="user_name" type="text" class="validate">
+                       </div>     
+                       <div class="col s12" style="padding-left:5px;">  
+                         <div class="input-field inline">                
+                          <span class="" style="color: rgba(0, 0, 0, 0.77)">4. வயது<span style="color:#d32f2f">*</span></span>
+                          <input placeholder=""  id="user_age" name="user_age" min="18" type="number" class="validate">
+                          <label for="user_age" data-error="Age sholud be >=18" data-success=""></label>
+                          </div>
+                       </div>  
+                      <div class="col s12">5. பாலினம்<span style="color:#d32f2f">*</span>
+                        <input name="user_gender" type="radio" id="male" value="male" />
+                        <label for="male">ஆண்</label>&nbsp;&nbsp;
+
+                        <input name="user_gender" type="radio" id="female" value="female" />
+                        <label for="female">பெண்</label>
+
+                      </div>
+                         <div class="col s12" style="padding-left:5px;">
+                         <div class="input-field inline"> 
+                         <span class="" style="color: rgba(0, 0, 0, 0.77)">6. கைபேசி எண்</span>
+                          <input placeholder="" id="user_mobile_no" data-length="10" min="1000000000" name="user_mobile_no" type="number" class="validate">
+                          <label for="user_mobile_no" data-error="Should be 10 digits" data-success=""></label>
+                          </div>
+                       </div>  
+                         <div class="col s12" style="padding-left:5px;">
+                         <div class="input-field inline"> 
+                         <span class="" style="color: rgba(0, 0, 0, 0.77)">7. Whatsapp எண்</span>
+                          <input placeholder="" id="user_whatsapp_no" data-length="10" min="1000000000" name="user_whatsapp_no" type="number" class="validate">
+                           <label for="user_whatsapp_no" data-error="Should be 10 digits" data-success=""></label>
+                          </div>
+                       </div>
+                         <div class="input-field col s12">
+                         <span class="" style="color: rgba(0, 0, 0, 0.77)">8. பூத் எண்<span style="color:#d32f2f">*</span></span>
+                          <input placeholder="" id="user_booth_no" name="user_booth_no" type="text" class="validate">
+                       </div>  
+                    </div>
+                      <div class="row">
+                          <div class="col m6 s6">
+
+                    <a class="btn waves-effect waves-light red" id="clearSubmit"  style="width: 100%;">
+                    <i class="material-icons right" style="margin-left: 5px;color:#fff;">&#xE14C;</i>   Clear
+                  </a>
+                            
+                          </div>
+                          <div class="col m6 s6">
+
+                    <a class="btn waves-effect waves-light" id="formSubmit" type="submit" name="action" style="width: 100%;">
+                    <i class="material-icons right" style="margin-left: 5px;color:#fff;">&#xE8DC;</i> Submit  
+                  </a>
+                            
+                          </div>
+                     </div>   
+                </div>
+                                   
+              </div>
+            </div>
+            
+          </form>
+        </div>
+        <div id="loading" class="modal modal-fixed-footer" style="height:80px;top:430px;" >
+    <div class="modal-content center" style="height:80px;margin-top:15x;" >
+     <div class="preloader-wrapper small active" style="margin-top:15x;">
+    <div class="spinner-layer spinner-green-only">
+      <div class="circle-clipper left">
+        <div class="circle"></div>
+      </div><div class="gap-patch">
+        <div class="circle"></div>
+      </div><div class="circle-clipper right">
+        <div class="circle"></div>
+      </div>
+    </div>
+  </div>
+
+    </div>
+  </div>
+          <div id="popup" class="modal" style="height:120px;top:400px;" >
+    <div class="modal-content center" style="height:60px" >
+    <span class="alertTxt" style="font-size:18px;"></span>
+
+    </div>
+    <div class="modal-footer" style="bottom:20px;">
+<a class="modal-action modal-close waves-green btn waves-effect waves-light">OK</a>
+    </div>
+  </div>
+
+    </body>
+
+      <!--Import jQuery before materialize.js-->
+
+      <script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
+      <script type="text/javascript" src="js/materialize.js"></script>
+      <script type="text/javascript">
+      $( document ).ready(function() {
+
+        $('.modal').modal(); 
+      $("#formSubmit").click(function(event){
+        event.preventDefault(); 
+
+var party=$("input[name=party_id]:checked").val();
+var gender =$("input[name=user_gender]:checked").val();
+var userName =$("input[name=user_name]").val();
+var userAge =$("input[name=user_age]").val();
+var booth =$("input[name=user_booth_no]").val();
+var mobileno = $("#user_mobile_no").val();
+var whatsappno = $("#user_whatsapp_no").val();
+var isValid=true;
+var isCheck =false;
+$(".areaBroblem").each(function()
+  {
+    if($(this).prop("checked")){
+isCheck=true;
+return;
+    }
+  });
+if(isCheck==false){
+  //alert("Choose party ")
+  $(".alertTxt").text("Check atleaset one problem")
+  isValid=false;
+}
+else
+if(party==undefined){
+  //alert("Choose party ")
+  $(".alertTxt").text("Choose party")
+  isValid=false;
+}
+else 
+if(userName==""){
+  //alert("Enter voter's name")
+  $(".alertTxt").text("Enter voter's name")
+  isValid=false;
+}
+else 
+if(userAge==""||userAge<18){
+  //alert("Enter voter's age above 18")
+  $(".alertTxt").text("Enter voter's age above 18")
+  isValid=false;
+}
+else if(gender==undefined){
+ // alert("Choose voter's sex")
+  $(".alertTxt").text("Choose voter's sex")
+  isValid=false;
+}
+else if(mobileno!==""&&mobileno.length!==10){
+  //alert("Enter voter's booth no")
+  $(".alertTxt").text("Mobile no should be 10 digits")
+  isValid=false;
+}
+else if(whatsappno!==""&&whatsappno.length!==10){
+  //alert("Enter voter's booth no")
+  $(".alertTxt").text("Whats app no should be 10 digits")
+  isValid=false;
+}
+else if(booth==""){
+  //alert("Enter voter's booth no")
+  $(".alertTxt").text("Enter voter's booth no")
+  isValid=false;
+}
+
+if(isValid){
+  $('#loading').modal('open');
+var submitForm = $("#submitForm");
+ var o = {};
+        var a = submitForm.serializeArray();
+        $.each(a, function() {
+            if (o[this.name]) {
+                if (!o[this.name].push) {
+                    o[this.name] = [o[this.name]];
+                }
+                o[this.name].push(this.value || '');
+            } else {
+                o[this.name] = this.value || '';
+            }
+        });
+
+$.ajax({
+  async: true,
+  crossDomain: true,
+  url: "https://esurvey.wesupportops.in/v1/user_survey",
+  method: "POST",
+  headers: {
+    "content-type": "application/json"
+  },
+  processData: false,  
+  data:JSON.stringify(o),
+      success: function(result)
+  {
+  $('#loading').modal('close');
+      if(JSON.stringify(result.status_code)==400){
+    Materialize.toast(JSON.stringify(result.message), 8000 );
+  }else{
+    Materialize.toast(JSON.stringify(result.message), 8000 );
+    location.reload();
+  
+  }
+  },
+  error:function(jqXHR, exception){
+  $('#loading').modal('close');
+  var msg = '';
+        if (jqXHR.status === 0) {
+            msg = 'Not connect.\n Verify Network.';
+        } else if (jqXHR.status == 404) {
+            msg = 'Requested page not found. [404]';
+        } else if (jqXHR.status == 500) {
+            msg = 'Internal Server Error [500].';
+        } else if (exception === 'parsererror') {
+            msg = 'Requested JSON parse failed.';
+        } else if (exception === 'timeout') {
+            msg = 'Time out error.';
+        } else if (exception === 'abort') {
+            msg = 'Ajax request aborted.';
+        } else {
+            msg = 'Uncaught Error.\n' + jqXHR.responseText;
+        }    
+        Materialize.toast(msg, 8000 );
+  }
+});}else{
+  $('#popup').modal('open');
+}
+      }) ;
+$("#clearSubmit").click(function() {
+ location.reload();
+});
+$("#user_name").on('keyup', function(e) {
+    var val = $(this).val();
+   if (val.match(/[^a-zA-Z]/g)) {
+       $(this).val(val.replace(/[^a-zA-Z\s]/g, ''));
+   }
+});
+});                   
+
+      </script>
+  </html>
+        
